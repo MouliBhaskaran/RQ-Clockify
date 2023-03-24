@@ -5,6 +5,7 @@ body.append(nav);
 let img = document.createElement("img");
 img.src = "./assets/bar.svg";
 img.classList.add("navigationcontent--img");
+img.setAttribute("menu-icon-btn", "");
 nav.append(img);
 let img1 = document.createElement("img");
 img1.src = "./assets/logo.png";
@@ -37,6 +38,7 @@ nav.append(navigationcontentline);
 
 let sidenavbar = document.createElement("div");
 sidenavbar.classList.add("sidenavbar");
+sidenavbar.setAttribute("data-sidebar", "");
 body.append(sidenavbar);
 
 let sidenavbardiv = document.createElement("div");
@@ -49,6 +51,7 @@ sidenavbardiv.append(sidenavbarimg);
 let sidenavbarpara = document.createElement("span");
 sidenavbarpara.innerHTML = "TIMESHEET";
 sidenavbarpara.classList.add("sidenavbarpara");
+sidenavbarpara.classList.add("hidden-sidebar")
 sidenavbardiv.append(sidenavbarpara);
 
 let sidenavbardiv1 = document.createElement("div");
@@ -62,6 +65,7 @@ sidenavbardiv1.append(sidenavbarimg1);
 let sidenavbarpara1 = document.createElement("span");
 sidenavbarpara1.innerHTML = "TIMETRACKER";
 sidenavbarpara1.classList.add("sidenavbarpara");
+sidenavbarpara1.classList.add("hidden-sidebar")
 sidenavbardiv1.append(sidenavbarpara1);
 
 let sidenavbardiv2 = document.createElement("div");
@@ -74,6 +78,7 @@ sidenavbardiv2.append(sidenavbarimg2);
 let sidenavbarpara2 = document.createElement("span");
 sidenavbarpara2.innerHTML = "CALENDAR";
 sidenavbarpara2.classList.add("sidenavbarpara");
+sidenavbarpara2.classList.add("hidden-sidebar")
 sidenavbardiv2.append(sidenavbarpara2);
 
 let head1 = document.createElement("div");
@@ -93,6 +98,7 @@ sidenavbardiv3.append(sidenavbarimg3);
 let sidenavbarpara3 = document.createElement("span");
 sidenavbarpara3.innerHTML = " DASHBOARD";
 sidenavbarpara3.classList.add("sidenavbarpara");
+sidenavbarpara3.classList.add("hidden-sidebar")
 sidenavbardiv3.append(sidenavbarpara3);
 
 let sidenavbardiv4 = document.createElement("div");
@@ -105,6 +111,7 @@ sidenavbardiv4.append(sidenavbarimg4);
 let sidenavbarpara4 = document.createElement("span");
 sidenavbarpara4.innerHTML = " REPORTS";
 sidenavbarpara4.classList.add("sidenavbarpara");
+sidenavbarpara4.classList.add("hidden-sidebar")
 sidenavbardiv4.append(sidenavbarpara4);
 
 let head2 = document.createElement("div");
@@ -124,6 +131,7 @@ sidenavbardiv5.append(sidenavbarimg5);
 let sidenavbarpara5 = document.createElement("span");
 sidenavbarpara5.innerHTML = " PROJECT";
 sidenavbarpara5.classList.add("sidenavbarpara");
+sidenavbarpara5.classList.add("hidden-sidebar")
 sidenavbardiv5.append(sidenavbarpara5);
 
 let sidenavbardiv6 = document.createElement("div");
@@ -136,6 +144,7 @@ sidenavbardiv6.append(sidenavbarimg6);
 let sidenavbarpara6 = document.createElement("span");
 sidenavbarpara6.innerHTML = " TEAM";
 sidenavbarpara6.classList.add("sidenavbarpara");
+sidenavbarpara6.classList.add("hidden-sidebar")
 sidenavbardiv6.append(sidenavbarpara6);
 
 let sidenavbardiv7 = document.createElement("div");
@@ -148,6 +157,7 @@ sidenavbardiv7.append(sidenavbarimg7);
 let sidenavbarpara7 = document.createElement("span");
 sidenavbarpara7.innerHTML = " CLIENT";
 sidenavbarpara7.classList.add("sidenavbarpara");
+sidenavbarpara7.classList.add("hidden-sidebar")
 sidenavbardiv7.append(sidenavbarpara7);
 
 let sidenavbardiv8 = document.createElement("div");
@@ -160,6 +170,7 @@ sidenavbardiv8.append(sidenavbarimg8);
 let sidenavbarpara8 = document.createElement("span");
 sidenavbarpara8.innerHTML = " TAGS";
 sidenavbarpara8.classList.add("sidenavbarpara");
+sidenavbarpara8.classList.add("hidden-sidebar")
 sidenavbardiv8.append(sidenavbarpara8);
 
 let sidenavbardiv9 = document.createElement("div");
@@ -172,6 +183,7 @@ sidenavbardiv9.append(sidenavbarimg9);
 let sidenavbarpara9 = document.createElement("span");
 sidenavbarpara9.innerHTML = "  SETTINGS";
 sidenavbarpara9.classList.add("sidenavbarpara");
+sidenavbarpara9.classList.add("hidden-sidebar")
 sidenavbardiv9.append(sidenavbarpara9);
 
 let head3 = document.createElement("div");
@@ -179,6 +191,7 @@ sidenavbar.append(head3);
 let sidenavbarheading2 = document.createElement("p");
 sidenavbarheading2.innerHTML = " SHOW MORE";
 sidenavbarheading2.classList.add("showmore");
+sidenavbarheading2.classList.add("hidden-sidebar")
 head3.append(sidenavbarheading2);
 
 let vl = document.createElement("div");
@@ -265,15 +278,16 @@ dash1.classList.add("dash");
 createProjectModal.append(dash1);
 
 let startbutton = document.createElement("button");
-startbutton.innerHTML = "CREATE";
+startbutton.innerHTML = "Create";
 startbutton.classList.add("tracker--btn1");
+startbutton.id = "close-createprojectmodal";
 createProjectModal.append(startbutton);
 
-let startbuttonredbutton = document.createElement("button");
-startbuttonredbutton.innerHTML = "CLOSE";
-startbuttonredbutton.id = "close-createprojectmodal";
-startbuttonredbutton.classList.add('tracker--btn2');
-createProjectModal.append(startbuttonredbutton);
+// let startbuttonredbutton = document.createElement("button");
+// startbuttonredbutton.innerHTML = "CLOSE";
+
+// startbuttonredbutton.classList.add("tracker--btn2");
+// createProjectModal.append(startbuttonredbutton);
 
 // tag
 
@@ -293,64 +307,89 @@ heading4.classList.add("heading4");
 tracker.append(heading4);
 
 let dollar = document.createElement("p");
-dollar.innerHTML = "$"
+dollar.innerHTML = "$";
 dollar.classList.add("dollar");
 heading4.append(dollar);
 
 // timer
 
 let heading5 = document.createElement("div");
-heading5.classList.add('timer');
-heading5.innerHTML = "00:00:00"
+heading5.classList.add("timer");
+heading5.innerHTML = "00:00:00";
 tracker.append(heading5);
 
 // start
 
-let heading6 = document.createElement('div');
-heading6.classList.add('heading6');
+let heading6 = document.createElement("div");
+heading6.classList.add("heading6");
 tracker.append(heading6);
 
-let trackerbtn = document.createElement('button');
+let trackerbtn = document.createElement("button");
 trackerbtn.innerHTML = "START";
-trackerbtn.classList.add('tracker--btn');
+trackerbtn.classList.add("tracker--btn");
 trackerbtn.onclick = "starttime()";
 trackerbtn.id = "mixBut";
 heading6.append(trackerbtn);
 
 // tracker clock and line button
 
-let heading7 = document.createElement('div');
-heading7.classList.add('heading7');
+let heading7 = document.createElement("div");
+heading7.classList.add("heading7");
 tracker.append(heading7);
 
-let tracker__img3 = document.createElement('img');
+let tracker__img3 = document.createElement("img");
 tracker__img3.src = "https://app.clockify.me/assets/ui-icons/clock-blue.svg";
-tracker__img3.classList.add('tracker__img3');
+tracker__img3.classList.add("tracker__img3");
 heading7.append(tracker__img3);
 
-let tracker__img4 = document.createElement('img');
+let tracker__img4 = document.createElement("img");
 tracker__img4.src = "https://app.clockify.me/assets/ui-icons/list-blue.svg";
-tracker__img4.classList.add('tracker__img4');
+tracker__img4.classList.add("tracker__img4");
 heading7.append(tracker__img4);
 
 // result from timer
 
-let result = document.createElement('div');
-result.classList.add('result');
+let result = document.createElement("div");
+result.classList.add("result");
 body.append(result);
 
-let paragraph = document.createElement('p');
-paragraph.classList.add('paragraph');
+let paragraph = document.createElement("p");
+paragraph.classList.add("paragraph");
 paragraph.innerHTML = "This week";
 result.append(paragraph);
 
-let resulttable = document.createElement('div');
-resulttable.classList.add('resulttable');
+let resulttable = document.createElement("div");
+resulttable.classList.add("resulttable");
 result.append(resulttable);
 
-let result__para1 = document.createElement('p');
-result__para1.classList.add('result__para1');
-result__para1.innerHTML = "Today";
+let result__para1 = document.createElement("p");
+result__para1.classList.add("result__para1");
+const currentDate = new Date();
+const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const monthsOfYear = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+const currentDay = daysOfWeek[currentDate.getDay()];
+const currentMonth = monthsOfYear[currentDate.getMonth()];
+const currentDateOfMonth = currentDate.getDate();
+
+const formattedDate = `${currentDay}, ${currentMonth} ${currentDateOfMonth}`;
+
+console.log(formattedDate);
+
+result__para1.innerHTML = `${formattedDate}`;
 resulttable.append(result__para1);
 
 // let result__para2 = document.createElement('p');
@@ -363,27 +402,23 @@ resulttable.append(result__para1);
 // result_timer1.innerHTML = "00:00:00";
 // resulttable.append(result_timer1);
 
-// icon 
-let result__img = document.createElement('img');
+// icon
+let result__img = document.createElement("img");
 result__img.src = "https://app.clockify.me/assets/ui-icons/bulk-edit.svg";
-result__img.classList.add('result__img');
+result__img.classList.add("result__img");
 resulttable.append(result__img);
 
-
 function clear() {
-  del = document.getElementsByClassName('timertabel')[0];
+  del = document.getElementsByClassName("timertabel")[0];
   del.remove();
   console.log("hi");
 }
 function resume() {
-  var element = document.getElementsByClassName('result_timer3')[0];
-  let [hrs, mins, secs] = element.innerText.split(':');
+  var element = document.getElementsByClassName("result_timer3")[0];
+  let [hrs, mins, secs] = element.innerText.split(":");
   hrs = Number(hrs);
   // console.log(element.innerText.split(':'));
   resumewatch();
-
-
-
 }
 function recountWatch() {
   if (running == 1) {
@@ -402,28 +437,22 @@ function recountWatch() {
     var another = document.getElementsByClassName("result_timer3")[0];
     another.textContent = gethrs + mins + secss;
 
-
     sec++;
     clearTime = setTimeout("resumewatch()", 1000);
-
-
   }
 }
 function resumewatch() {
   if (running == 0) {
     running = 1;
-    console.log('start')
-    recountWatch()
+    console.log("start");
+    recountWatch();
   } else {
     running = 0;
-    console.log('stop')
-
+    console.log("stop");
   }
 }
 
-
-
-var tasklist = []
+var tasklist = [];
 
 var time = 0;
 var running = 0;
@@ -465,24 +494,24 @@ mixBut.addEventListener("click", stopwatch);
 
 function stopwatch() {
   let projectvalue1 = document.getElementsByClassName("input-border")[1].value;
-  if(projectvalue1){
+  if (projectvalue1) {
     if (running == 0) {
       running = 1;
-      console.log('start')
+      console.log("start");
       startTime = getTime();
       Start_Watch();
       mixBut.innerText = "Stop";
-      mixBut.classList.add('red-button');
+      mixBut.classList.add("red-button");
     } else {
       running = 0;
-      console.log('stop')
+      console.log("stop");
       endTime = getTime();
       mixBut.innerText = "Start";
-      mixBut.classList.remove('red-button');
+      mixBut.classList.remove("red-button");
       addTask();
     }
-  }else{
-    window.alert("Please create a project")
+  } else {
+    window.alert("Please create a project");
   }
 }
 
@@ -509,13 +538,12 @@ function Start_Watch() {
 }
 
 function createListItem(task) {
-
-  let timertabel = document.createElement('div');
-  timertabel.classList.add('timertabel');
+  let timertabel = document.createElement("div");
+  timertabel.classList.add("timertabel");
   result.append(timertabel);
 
-  let result__para3 = document.createElement('p');
-  result__para3.classList.add('result__para3');
+  let result__para3 = document.createElement("p");
+  result__para3.classList.add("result__para3");
   result__para3.innerHTML = task.name;
   timertabel.append(result__para3);
 
@@ -525,203 +553,192 @@ function createListItem(task) {
   // resultinput.classList.add('resultinput');
   // timertabel.append(resultinput);
 
-let resultproject = document.createElement('div');
-let projectvalue = document.getElementsByClassName("input-border")[1].value;
-resultproject.innerText = projectvalue;
-resultproject.id = "resultproject";
-timertabel.append(resultproject);
+  let resultproject = document.createElement("div");
+  let projectvalue = document.getElementsByClassName("input-border")[1].value;
+  resultproject.innerText = projectvalue;
+  resultproject.id = "resultproject";
+  timertabel.append(resultproject);
 
-
-
-
-  let result__img3 = document.createElement('img');
+  let result__img3 = document.createElement("img");
   result__img3.src = "https://app.clockify.me/assets/ui-icons/tag-gray.svg";
-  result__img3.classList.add('result__img3');
+  result__img3.classList.add("result__img3");
   timertabel.append(result__img3);
 
-  let result__dolar = document.createElement('p');
-  result__dolar.classList.add('result__dolar');
+  let result__dolar = document.createElement("p");
+  result__dolar.classList.add("result__dolar");
   result__dolar.innerHTML = "$";
   timertabel.append(result__dolar);
 
-
-
-  let editinput = document.createElement('input');
-  editinput.classList.add('result_timer2');
-  editinput.id="change1"
-  editinput.value = `${task.startTime}`
+  let editinput = document.createElement("input");
+  editinput.classList.add("result_timer2");
+  editinput.id = "change1";
+  editinput.value = `${task.startTime}`;
   console.log(editinput.value);
   timertabel.append(editinput);
 
-  let septag = document.createElement('p');
-  septag.classList.add('septag');
-  septag.innerHTML="-";
-  timertabel.append(septag);
-
-  let editinput1 = document.createElement('input');
-  editinput1.classList.add('result_timer2');
-  editinput1.id="change2";
-  editinput1.value = `${task.endTime}`
+  let editinput1 = document.createElement("input");
+  editinput1.classList.add("result_timer2");
+  editinput1.id = "change2";
+  editinput1.value = `${task.endTime}`;
   timertabel.append(editinput1);
 
+  let verticaldottedline = document.createElement("div");
+  verticaldottedline.classList.add("verticaldottedline");
+  verticaldottedline.id = "verticaldotted"
+  timertabel.append(verticaldottedline);
 
+  let verticaldottedline2 = document.createElement("div");
+  verticaldottedline2.classList.add("verticaldottedline2");
+  verticaldottedline2.id = "verticaldotted"
+  timertabel.append(verticaldottedline2);
 
+  let verticaldottedline3 = document.createElement("div");
+  verticaldottedline3.classList.add("verticaldottedline3");
+  verticaldottedline3.id = "verticaldotted"
+  timertabel.append(verticaldottedline3);
 
+  let verticaldottedline4 = document.createElement("div");
+  verticaldottedline4.classList.add("verticaldottedline4");
+  verticaldottedline4.id = "verticaldotted"
+  timertabel.append(verticaldottedline4);
 
+  let verticaldottedline5 = document.createElement("div");
+  verticaldottedline5.classList.add("verticaldottedline5");
+  verticaldottedline5.id = "verticaldotted"
+  timertabel.append(verticaldottedline5);
 
-  let result__img4 = document.createElement('img');
-  result__img4.src = "https://app.clockify.me/assets/ui-icons/calendar-gray.svg";
-  result__img4.classList.add('result__img4');
+  let verticaldottedline6 = document.createElement("div");
+  verticaldottedline6.classList.add("verticaldottedline6");
+  verticaldottedline6.id = "verticaldotted"
+  timertabel.append(verticaldottedline6);
+
+  let result__img4 = document.createElement("img");
+  result__img4.src =
+    "https://app.clockify.me/assets/ui-icons/calendar-gray.svg";
+  result__img4.classList.add("result__img4");
   timertabel.append(result__img4);
 
-  let result_timer3 = document.createElement('div');
-  result_timer3.classList.add('result_timer3');
+  let result_timer3 = document.createElement("div");
+  result_timer3.classList.add("result_timer3");
   var time = task.duration;
   result_timer3.innerHTML = task.duration;
   timertabel.append(result_timer3);
 
-  let result__img5 = document.createElement('img');
+  let result__img5 = document.createElement("img");
   result__img5.src = "https://app.clockify.me/assets/ui-icons/play.svg";
-  result__img5.classList.add('result__img5');
-  result__img5.addEventListener('click', resume);
+  result__img5.classList.add("result__img5");
+  // result__img5.addEventListener("click", resume);
   timertabel.append(result__img5);
 
-  let result__img6 = document.createElement('img');
+  let result__img6 = document.createElement("img");
   result__img6.src = "./assets/close.png";
-  result__img6.classList.add('result__img6');
-  result__img6.addEventListener('click', clear);
+  result__img6.classList.add("result__img6");
+  result__img6.addEventListener("click", clear);
   timertabel.append(result__img6);
 
-  let resulttable = document.getElementsByClassName('result')[0];
+  let resulttable = document.getElementsByClassName("result")[0];
   resulttable.append(timertabel);
 
+  let diff = document.getElementById("change1");
 
-  let diff= document.getElementById('change1');
-  
   diff.addEventListener("change", updation);
-  let diff2= document.getElementById('change2');
-  
+  let diff2 = document.getElementById("change2");
+
   diff2.addEventListener("change", updation);
- function updation(){
-//    let [hrs2, mins2, secs2] = editinput1.value.split(':');
-//    debugger
- 
-//  let [hrs1, mins1, secs1] = editinput.value.split(':');
-// hrs2 = Number(hrs2);
-//  mins2=Number(mins2);
-//  secs2=Number(secs2);
-// hrs1=Number(hrs1);
-// mins1=Number(mins1);
-//   secs1=Number(secs1);
+  function updation() {
+    // getting the two input elements
+    const startTimeInput = document.getElementById("change1");
+    const endTimeInput = document.getElementById("change2");
+    // create Date objects with the current date and the input time values
+    const currentDate = new Date();
+    const startTime = new Date(
+      `${currentDate.toDateString()} ${startTimeInput.value}`
+    );
+    const endTime = new Date(
+      `${currentDate.toDateString()} ${endTimeInput.value}`
+    );
 
-//  hrs3=hrs2-hrs1;
-//   mins3=mins2-mins1;
-//  secs3=secs2-secs1;
-// result_timer3.innerHTML=hrs3 + ":" + mins3 + ":" + secs3;
+    // convert the Date objects into milliseconds
+    const startMs = startTime.getTime();
+    const endMs = endTime.getTime();
 
-let firstval=editinput1.value;
-let secondval=editinput.value;
+    // calculate the time difference in milliseconds
+    let timeDiff = endMs - startMs;
 
+    // if the difference is negative, add 12 hours to the difference
+    if (timeDiff < 0) {
+      timeDiff += 12 * 60 * 60 * 1000;
+    }
 
+    // convert the time difference into hours, minutes, and seconds
+    const hours = Math.floor(timeDiff / (60 * 60 * 1000));
+    timeDiff -= hours * 60 * 60 * 1000;
+    const minutes = Math.floor(timeDiff / (60 * 1000));
+    timeDiff -= minutes * 60 * 1000;
+    const seconds = Math.floor(timeDiff / 1000);
 
-console.log("Example to Subtract two dates")
-firstval = firstval.split(":")
-var d1 = new Date()
-d1.setHours(firstval[0], firstval[1], firstval[2]);
-secondval = secondval.split(":")
-var d2 = new Date()
-d2.setHours(secondval[0], secondval[1], secondval[2]);
-var sub = d2.getTime()-d1.getTime();
-console.log(sub);
+    // format the result in HH:MM:SS format
+    const result = `${hours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
-function msToTime(duration) {
-  var 
-    seconds = Math.floor((duration / 1000) % 60),
-    minutes = Math.floor((duration / (1000 * 60)) % 60),
-    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-
-  hours = (hours < 10) ? "0" + hours : hours;
-  minutes = (minutes < 10) ? "0" + minutes : minutes;
-  seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-  return hours + ":" + minutes + ":" + seconds  ;
+    // displaying the result in the tag
+    result_timer3.innerHTML = result;
+  }
 }
-console.log(msToTime(sub));
-result_timer3.innerHTML=(msToTime(sub));
-
- 
-}
- 
-  
-
-
-}
-   
-
 
 var projectModal = document.getElementById("projectmodal");
 var addProject = document.getElementsByClassName("heading2")[0];
 
 addProject.addEventListener("click", toggleModal);
 function toggleModal() {
-
   projectModal.classList.toggle("modal-hide");
-
 }
 
-window.addEventListener("load", toggleModal)
-
+window.addEventListener("load", toggleModal);
 
 var createProjectElement = document.getElementById("createProject");
 
 createProjectElement.addEventListener("click", openModal);
 
 function openModal() {
-
   let Modal = document.getElementById("createProjectModal");
 
   Modal.classList.toggle("open-projectModal");
 
-
-
   projectModal.classList.toggle("modal-hide");
-
 }
 
-
-
 var closeprojectmodalbutton = document.getElementById(
-
   "close-createprojectmodal"
-
 );
 
 closeprojectmodalbutton.addEventListener("click", function () {
-
   let Modal = document.getElementById("createProjectModal");
 
   Modal.classList.toggle("open-projectModal");
 
   // mainbar.classList.remove("blur");
-
 });
 
+let create = document.getElementsByClassName("tracker--btn1")[0];
+create.addEventListener("click", addto);
 
-let create=document.getElementsByClassName("tracker--btn1")[0];
-create.addEventListener("click",addto)
-
-function addto(){
-  let create2=document.getElementsByClassName("input-border")[1];
-  let entertext=create2.value;
-  let create3=document.getElementsByClassName("heading2")[0];
-  create3.innerText=entertext;
-  create3.classList.add("modification")
-console.log(create2.textContent);
-
-
-
+function addto() {
+  let create2 = document.getElementsByClassName("input-border")[1];
+  let entertext = create2.value;
+  let create3 = document.getElementsByClassName("heading2")[0];
+  create3.innerText = entertext;
+  create3.classList.add("modification");
+  console.log(create2.textContent);
 }
 
+// sidevar open and collapse
+const menuIconbutton = document.querySelector("[menu-icon-btn]");
 
+const sidebar = document.querySelector("[data-sidebar]");
 
-
+menuIconbutton.addEventListener("click", () => {
+  // open side bar || close sidebar
+  sidebar.classList.toggle("open");
+});

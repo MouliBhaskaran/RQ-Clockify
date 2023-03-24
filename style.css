@@ -1,5 +1,21 @@
+:root {
+    --med-gray: rgb(96, 96, 96);
+    --dark-gray: rgb(13, 13, 13);
+    --header-height: 60px;
+    --animation-duration: 200ms;
+    --animation-timing-curve: ease-in-out;
+    --primary-color: rgb(3, 3, 3);
+    --secondary-color: rgb(3, 169, 244);
+    --tertiary-color: rgb(21, 189, 210);
+    --largest-font: 4rem;
+    --larger-font: 3rem;
+    --large-font: 2rem;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -27,6 +43,7 @@ body {
 
 .navigationcontent {
     background-color: white;
+    width: 1100px;
 
 }
 
@@ -80,7 +97,8 @@ body {
     box-sizing: content-box;
     background-color: #03a9f4;
     border-radius: 50%;
-    border: 1px solid #03a9f4;;
+    border: 1px solid #03a9f4;
+    ;
 
 }
 
@@ -88,10 +106,41 @@ body {
     position: relative;
     top: -79px;
     opacity: 0.5;
+    width: 1346px !important;
 }
 
 .sidenavbar {
-    margin-top: -60px;
+    margin-top: -75px;
+    width: 75px !important;
+    min-height: 100vh;
+    z-index: 1020;
+    transition: width var(--animation-duration) var(--animation-timing-curve);
+}
+
+.sidenavbar .hidden-sidebar {
+    opacity: 0;
+    width: 0 !important;
+    transition: opacity var(--animation-duration) var(--animation-timing-curve);
+}
+
+.sidenavbar.open .hidden-sidebar {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+
+.sidenavbar.open .sidenavbar--div {
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+
+}
+
+.sidenavbar.open .sidenavbarimg {
+    margin-right: 1rem;
+}
+
+.sidenavbar.open {
+    width: 200px;
 }
 
 .sidenavbar--div {
@@ -108,8 +157,6 @@ body {
     position: relative;
     left: 20px;
     top: -5px;
-    font-weight: 410;
-
 }
 
 
@@ -142,11 +189,10 @@ body {
 }
 
 .vl {
-    border-left: 1px solid rgb(153, 153, 153);
     height: 800px;
     position: relative;
     left: 170px;
-    top: -645px;
+    top: -670px;
     opacity: 0.5;
     background-color: #f2f6f8;
     width: 1210px;
@@ -156,7 +202,7 @@ body {
     display: flex;
     width: 1020px;
     height: 60px;
-    left: 250px !important;
+    left: 260px !important;
     border: 0.2px solid #fefefe;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -270,14 +316,16 @@ body {
 
 .tracker--btn1 {
     position: relative;
-    left: 15px;
-    font-size: 16px;
+    left: 58px;
+    top: -4px;
+    font-size: 15px;
     width: 80px;
     height: 25px;
     color: white;
+    font-weight: 600;
     background-color: rgb(3, 169, 244);
     border: 1px solid rgb(3, 169, 244);
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 .tracker--btn2 {
@@ -318,7 +366,7 @@ body {
 
 .tracker--btn {
     position: relative;
-    left: 270px;
+    left: 290px;
     top: 12px;
     font-size: 16px;
     width: 100px;
@@ -332,14 +380,14 @@ body {
 
 .tracker__img3 {
     position: relative;
-    left: 290px;
+    left: 300px;
     top: 13px;
     cursor: pointer;
 }
 
 .tracker__img4 {
     position: relative;
-    left: 278px;
+    left: 287px;
     top: 35px;
     cursor: pointer;
 }
@@ -381,6 +429,67 @@ body {
 
 }
 
+.verticaldottedline {
+    content: "";
+    position: absolute;
+    /* z-index: -1; */
+    top: 328px;
+    /* bottom: 0; */
+    left: 697px;
+    height: 40px;
+    border-left: 2px dotted rgb(190, 190, 190);
+}
+
+.verticaldottedline2{
+    content: "";
+    position: absolute;
+    /* z-index: -1; */
+    top: 328px;
+    /* bottom: 0; */
+    left: 743px;
+    height: 40px;
+    border-left: 2px dotted rgb(190, 190, 190);
+}
+.verticaldottedline3{
+    content: "";
+    position: absolute;
+    /* z-index: -1; */
+    top: 328px;
+    /* bottom: 0; */
+    left: 1047px;
+    height: 40px;
+    border-left: 2px dotted rgb(190, 190, 190);
+}
+.verticaldottedline4{
+    content: "";
+    position: absolute;
+    /* z-index: -1; */
+    top: 328px;
+    /* bottom: 0; */
+    left: 812px;
+    height: 40px;
+    border-left: 2px dotted rgb(190, 190, 190);
+}
+.verticaldottedline5{
+    content: "";
+    position: absolute;
+    /* z-index: -1; */
+    top: 328px;
+    /* bottom: 0; */
+    left: 1186px;
+    height: 40px;
+    border-left: 2px dotted rgb(190, 190, 190);
+}
+.verticaldottedline6{
+    content: "";
+    position: absolute;
+    /* z-index: -1; */
+    top: 328px;
+    /* bottom: 0; */
+    left: 1284px;
+    height: 40px;
+    border-left: 2px dotted rgb(190, 190, 190);
+}
 .result__para2 {
     position: relative;
     left: 920px;
@@ -395,15 +504,17 @@ body {
 
 .result__img {
     position: relative;
-    left:   1040px;
-    top: px;
+    left: 1007px;
+    top: 2px;
     width: 25px;
 }
 
 .result__para1 {
     position: relative;
-    left: px;
+    left: 10px;
     color: rgb(153, 153, 153);
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .resultinput {
@@ -424,19 +535,22 @@ body {
     text-align: center;
     position: relative;
     top: 18px;
-    left: 100px;
-    color: rgb(0, 0, 0);
+    left: 70px !important;
+    color: #673AB7;
     font-weight: 500;
     font-size: 16px;
+    display: list-item;
+    list-style-type: disc;
+
 }
 
 .result__para3 {
     position: relative;
-    left: 60px;
+    left: 20px;
     color: rgb(0, 0, 0);
     font-weight: 500;
     font-size: 16px;
-    width: 190px;
+    width: 130px;
     height: 20px;
 }
 
@@ -459,7 +573,7 @@ body {
 .result_timer2 {
     position: relative;
     left: 350px !important;
-    width:80px !important;
+    width: 80px !important;
     right: 10px;
     top: 18px;
     width: 70px;
@@ -467,14 +581,9 @@ body {
     border: #f2f6f8;
 }
 
-.septag{
-    color: #000;
-    font-size: 15px;
-}
-
 .result_timer3 {
     position: relative;
-    left: 450px;
+    left: 406px;
     top: 16px;
     font-size: 22px;
     width: 90px;
@@ -482,7 +591,7 @@ body {
 
 .result__img4 {
     position: relative;
-    left: 410px;
+    left: 360px;
     top: px;
     width: 25px;
 }
@@ -496,7 +605,7 @@ body {
 
 .result__img6 {
     position: relative;
-    left: 448px;
+    left: 455px;
     top: 14px;
     width: 30px;
     height: 30px;
@@ -567,5 +676,9 @@ body {
 .modification {
     margin-left: 30px;
     margin-top: 20px;
-    color: rgb(3, 169, 244);
+    color: #673AB7;
+    font-weight: 500;
+    font-size: 16px;
+    display: list-item;
+    list-style-type: disc;
 }
