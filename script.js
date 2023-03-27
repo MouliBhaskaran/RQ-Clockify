@@ -51,7 +51,7 @@ sidenavbardiv.append(sidenavbarimg);
 let sidenavbarpara = document.createElement("span");
 sidenavbarpara.innerHTML = "TIMESHEET";
 sidenavbarpara.classList.add("sidenavbarpara");
-sidenavbarpara.classList.add("hidden-sidebar")
+sidenavbarpara.classList.add("hidden-sidebar");
 sidenavbardiv.append(sidenavbarpara);
 
 let sidenavbardiv1 = document.createElement("div");
@@ -65,7 +65,7 @@ sidenavbardiv1.append(sidenavbarimg1);
 let sidenavbarpara1 = document.createElement("span");
 sidenavbarpara1.innerHTML = "TIMETRACKER";
 sidenavbarpara1.classList.add("sidenavbarpara");
-sidenavbarpara1.classList.add("hidden-sidebar")
+sidenavbarpara1.classList.add("hidden-sidebar");
 sidenavbardiv1.append(sidenavbarpara1);
 
 let sidenavbardiv2 = document.createElement("div");
@@ -78,7 +78,7 @@ sidenavbardiv2.append(sidenavbarimg2);
 let sidenavbarpara2 = document.createElement("span");
 sidenavbarpara2.innerHTML = "CALENDAR";
 sidenavbarpara2.classList.add("sidenavbarpara");
-sidenavbarpara2.classList.add("hidden-sidebar")
+sidenavbarpara2.classList.add("hidden-sidebar");
 sidenavbardiv2.append(sidenavbarpara2);
 
 let head1 = document.createElement("div");
@@ -98,7 +98,7 @@ sidenavbardiv3.append(sidenavbarimg3);
 let sidenavbarpara3 = document.createElement("span");
 sidenavbarpara3.innerHTML = " DASHBOARD";
 sidenavbarpara3.classList.add("sidenavbarpara");
-sidenavbarpara3.classList.add("hidden-sidebar")
+sidenavbarpara3.classList.add("hidden-sidebar");
 sidenavbardiv3.append(sidenavbarpara3);
 
 let sidenavbardiv4 = document.createElement("div");
@@ -111,7 +111,7 @@ sidenavbardiv4.append(sidenavbarimg4);
 let sidenavbarpara4 = document.createElement("span");
 sidenavbarpara4.innerHTML = " REPORTS";
 sidenavbarpara4.classList.add("sidenavbarpara");
-sidenavbarpara4.classList.add("hidden-sidebar")
+sidenavbarpara4.classList.add("hidden-sidebar");
 sidenavbardiv4.append(sidenavbarpara4);
 
 let head2 = document.createElement("div");
@@ -131,7 +131,7 @@ sidenavbardiv5.append(sidenavbarimg5);
 let sidenavbarpara5 = document.createElement("span");
 sidenavbarpara5.innerHTML = " PROJECT";
 sidenavbarpara5.classList.add("sidenavbarpara");
-sidenavbarpara5.classList.add("hidden-sidebar")
+sidenavbarpara5.classList.add("hidden-sidebar");
 sidenavbardiv5.append(sidenavbarpara5);
 
 let sidenavbardiv6 = document.createElement("div");
@@ -144,7 +144,7 @@ sidenavbardiv6.append(sidenavbarimg6);
 let sidenavbarpara6 = document.createElement("span");
 sidenavbarpara6.innerHTML = " TEAM";
 sidenavbarpara6.classList.add("sidenavbarpara");
-sidenavbarpara6.classList.add("hidden-sidebar")
+sidenavbarpara6.classList.add("hidden-sidebar");
 sidenavbardiv6.append(sidenavbarpara6);
 
 let sidenavbardiv7 = document.createElement("div");
@@ -157,7 +157,7 @@ sidenavbardiv7.append(sidenavbarimg7);
 let sidenavbarpara7 = document.createElement("span");
 sidenavbarpara7.innerHTML = " CLIENT";
 sidenavbarpara7.classList.add("sidenavbarpara");
-sidenavbarpara7.classList.add("hidden-sidebar")
+sidenavbarpara7.classList.add("hidden-sidebar");
 sidenavbardiv7.append(sidenavbarpara7);
 
 let sidenavbardiv8 = document.createElement("div");
@@ -170,7 +170,7 @@ sidenavbardiv8.append(sidenavbarimg8);
 let sidenavbarpara8 = document.createElement("span");
 sidenavbarpara8.innerHTML = " TAGS";
 sidenavbarpara8.classList.add("sidenavbarpara");
-sidenavbarpara8.classList.add("hidden-sidebar")
+sidenavbarpara8.classList.add("hidden-sidebar");
 sidenavbardiv8.append(sidenavbarpara8);
 
 let sidenavbardiv9 = document.createElement("div");
@@ -183,7 +183,7 @@ sidenavbardiv9.append(sidenavbarimg9);
 let sidenavbarpara9 = document.createElement("span");
 sidenavbarpara9.innerHTML = "  SETTINGS";
 sidenavbarpara9.classList.add("sidenavbarpara");
-sidenavbarpara9.classList.add("hidden-sidebar")
+sidenavbarpara9.classList.add("hidden-sidebar");
 sidenavbardiv9.append(sidenavbarpara9);
 
 let head3 = document.createElement("div");
@@ -191,7 +191,7 @@ sidenavbar.append(head3);
 let sidenavbarheading2 = document.createElement("p");
 sidenavbarheading2.innerHTML = " SHOW MORE";
 sidenavbarheading2.classList.add("showmore");
-sidenavbarheading2.classList.add("hidden-sidebar")
+sidenavbarheading2.classList.add("hidden-sidebar");
 head3.append(sidenavbarheading2);
 
 let vl = document.createElement("div");
@@ -584,32 +584,32 @@ function createListItem(task) {
 
   let verticaldottedline = document.createElement("div");
   verticaldottedline.classList.add("verticaldottedline");
-  verticaldottedline.id = "verticaldotted"
+  verticaldottedline.id = "verticaldotted";
   timertabel.append(verticaldottedline);
 
   let verticaldottedline2 = document.createElement("div");
   verticaldottedline2.classList.add("verticaldottedline2");
-  verticaldottedline2.id = "verticaldotted"
+  verticaldottedline2.id = "verticaldotted";
   timertabel.append(verticaldottedline2);
 
   let verticaldottedline3 = document.createElement("div");
   verticaldottedline3.classList.add("verticaldottedline3");
-  verticaldottedline3.id = "verticaldotted"
+  verticaldottedline3.id = "verticaldotted";
   timertabel.append(verticaldottedline3);
 
   let verticaldottedline4 = document.createElement("div");
   verticaldottedline4.classList.add("verticaldottedline4");
-  verticaldottedline4.id = "verticaldotted"
+  verticaldottedline4.id = "verticaldotted";
   timertabel.append(verticaldottedline4);
 
   let verticaldottedline5 = document.createElement("div");
   verticaldottedline5.classList.add("verticaldottedline5");
-  verticaldottedline5.id = "verticaldotted"
+  verticaldottedline5.id = "verticaldotted";
   timertabel.append(verticaldottedline5);
 
   let verticaldottedline6 = document.createElement("div");
   verticaldottedline6.classList.add("verticaldottedline6");
-  verticaldottedline6.id = "verticaldotted"
+  verticaldottedline6.id = "verticaldotted";
   timertabel.append(verticaldottedline6);
 
   let result__img4 = document.createElement("img");
@@ -645,30 +645,31 @@ function createListItem(task) {
   let diff2 = document.getElementById("change2");
 
   diff2.addEventListener("change", updation);
+  
   function updation() {
-    // getting the two input elements
     const startTimeInput = document.getElementById("change1");
     const endTimeInput = document.getElementById("change2");
+
     // create Date objects with the current date and the input time values
     const currentDate = new Date();
-    const startTime = new Date(
+    let startTime = new Date(
       `${currentDate.toDateString()} ${startTimeInput.value}`
     );
-    const endTime = new Date(
+    let endTime = new Date(
       `${currentDate.toDateString()} ${endTimeInput.value}`
     );
+
+    // if the end time is earlier than the start time, assume it is on the next day
+    if (endTime < startTime) {
+      endTime.setDate(endTime.getDate() + 1);
+    }
 
     // convert the Date objects into milliseconds
     const startMs = startTime.getTime();
     const endMs = endTime.getTime();
 
     // calculate the time difference in milliseconds
-    let timeDiff = endMs - startMs;
-
-    // if the difference is negative, add 12 hours to the difference
-    if (timeDiff < 0) {
-      timeDiff += 12 * 60 * 60 * 1000;
-    }
+    let timeDiff = Math.abs(endMs - startMs);
 
     // convert the time difference into hours, minutes, and seconds
     const hours = Math.floor(timeDiff / (60 * 60 * 1000));
